@@ -299,28 +299,45 @@ section{
   font-size: 2.5rem;
 }
 
-.deal{
-  background:url(../images/deal-bg.jpg) no-repeat;
-  background-position: center;
+.parq {
+  background:url(../images/parqueadero_free.jpg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
   background-size: cover;
+  position: relative;
   padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-bottom: 7rem; 
+  z-index: 1; 
 }
 
-.deal .content{
+.parq::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right top, #5e6b7ebe, #24282baf, #151e1fb7, #414035af, #50524bbb);
+  z-index: -1;
+}
+
+.parq .content{
   max-width: 50rem;
 }
 
-.deal .content .title{
+.parq .content .title{
   font-size: 4rem;
-  color:var(--black);
+  color:var(--white);
 }
 
-.deal .content p{
+.parq .content p{
   font-size: 1.7rem;
   padding:1rem 0;
-  color:#333;
+  color:rgb(214, 214, 214);
 }
+
+
 
 .contact .row {
   display: -webkit-box;
@@ -413,6 +430,127 @@ section{
 
 .newsletter form .btn{
   margin-top: 0;
+}
+
+.deal{
+  background:url(../images/deal-bg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.deal .content{
+  max-width: 50rem;
+}
+
+.deal .content .title{
+  font-size: 4rem;
+  color:var(--black);
+}
+
+.deal .content p{
+  font-size: 1.7rem;
+  padding:1rem 0;
+  color:#333;
+}
+
+.thumbnails:hover img {
+  opacity: 0.6;
+  transform: scale(0.92);
+}
+
+.thumbnails:hover img:hover {
+  opacity: 1;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+}
+
+.blogs .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30%, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  gap: 2rem;
+}
+
+.blogs .box-container .box {
+  position: relative;
+}
+
+.blogs .box-container .box:hover .image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.blogs .box-container .box:hover .image .icons {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.blogs .box-container .box .image {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.blogs .box-container .box .image .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem;
+  background: var(--black);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  -webkit-transform: translateY(10rem);
+          transform: translateY(10rem);
+}
+
+.blogs .box-container .box .image .icons a {
+  font-size: 1.5rem;
+  color:  var(--white);
+}
+
+.blogs .box-container .box .image .icons a i {
+  padding-right: 5rem;
+  color:  var(--tertiary);
+}
+
+.blogs .box-container .box .image .icons a:hover {
+  color:  var(--tertiary);
+}
+
+.blogs .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blogs .box-container .box .content {
+  text-align: center;
+  padding: 2rem;
+}
+
+.blogs .box-container .box .content h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color:  var(--white);
+}
+
+.blogs .box-container .box .content p {
+  font-size: 2rem;
+  line-height: 2;
+  color: var(--gray);
+  padding: 1.5rem 0;
 }
 
 .footer .box-container{
@@ -702,6 +840,16 @@ input.whats-input[type=text]:focus {
 }
 
 @media(max-width:768px){
+  .blogs .box-container .box .image {
+    height: 100%;
+  }
+  .blogs .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(100%, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    gap: 2rem;
+  }
 
   .header-2 .icons {
     display: flex;
