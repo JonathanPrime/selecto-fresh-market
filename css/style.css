@@ -173,10 +173,23 @@ section{
   flex-wrap: wrap;
   background:url(../images/banner.jpg) no-repeat;
   background-size: cover;
+  position: relative;
   background-position: right;
+  height: 100vh;
   text-align: center;
   padding:5rem 2rem;
-  height: 100vh;
+  z-index: 1;
+}
+
+.home::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right top, #c75c5eb8, #5813131c, #48010175, #7b20209c, #763732);
+  z-index: -1;
 }
 
 .home .image{
@@ -185,7 +198,8 @@ section{
 }
 
 .home .image img{
-  width:100%;
+  width: 60%;
+  height: 60%;
 }
 
 .home .content{
@@ -1065,6 +1079,11 @@ input.whats-input[type=text]:focus {
     font-size: 55%;
   }
 
+  .home .image img {
+    width: 70%;
+    height: 70%;
+  }
+
 
 }
 
@@ -1085,6 +1104,13 @@ input.whats-input[type=text]:focus {
 }
 
 @media(max-width:768px){
+  .home .image img {
+    width: 80%;
+    height: 80%;
+  }
+  .home::after {
+    background: linear-gradient(to right top, #c75c5edb, #5813139c, #4801019c, #7b2020c2, #763732);
+  }
   .blogs .box-container .box .image {
     height: 100%;
   }
@@ -1180,6 +1206,10 @@ input.whats-input[type=text]:focus {
 }
 
 @media(max-width:450px){
+  .home .image img {
+    width: 100%;
+    height: 100%;
+  }
 
   html{
     font-size: 50%;
