@@ -101,6 +101,7 @@ section{
 .header .nav a {
   font-size: 2rem;
   margin-left: 2rem;
+  font-weight: bold;
   color: #fff;
 }
 
