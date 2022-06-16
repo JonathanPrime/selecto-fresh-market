@@ -8,11 +8,13 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <link rel="icon" type="image/x-icon" href="./icon.svg">
+    <link rel="icon" type="image/x-icon" href="./icone.ico">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/css/lightbox.min.css">
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
@@ -22,29 +24,21 @@
 <body>
 
     <!-- header section starts  -->
-    <header>
-        <!-- <div class="header-1">
-        <a href="#" class="logo"><i class="fas fa-shopping-basket"></i>groco</a>
-        <form action="" class="search-box-container">
-            <input type="search" id="search-box" placeholder="search here...">
-            <label for="search-box" class="fas fa-search"></label>
-        </form>
-    </div> -->
-        <div class="header-2">
-            <div id="menu-bar" class="fas fa-bars"></div>
-            <div class="icons">
-                <img src="images/logos/logo-dark.svg" alt="" class="img-logo">
-            </div>
-            <nav class="navbar">
+    <header class="header fixed-top">
+        <div class="container">
+           <div class="row align-items-center justify-content-between">
+            <img src="images/logos/logo-white.svg" alt="" class="logo-desing" id="img-logo">
+              <nav class="nav">
                 <a href="#home">Inicio</a>
                 <a href="#about">Nosotros</a>
                 <a href="#product">Productos</a>
                 <a href="#contact">Encuentranos</a>
                 <a href="#blogs">Noticias</a>
-            </nav>
+              </nav>
+              <div id="menu-btn" class="fas fa-bars"></div>
+           </div>
         </div>
-    </header>
-
+     </header>
     <!-- header section ends -->
 
     <!-- home section starts  -->
@@ -469,7 +463,7 @@
             <div class="box">
                 <h3>Contáctanos</h3>
                 <a href="https://g.page/selecto-fersh-market?share" target="_blank"> <i class="btn far fa-map"></i> </a>
-                <a href="tel:+573158902557"> <i class="btn fas fa-phone"></i> </a>
+                <a href="tel:+573158902557"> <i class="btn fab fa-instagram"></i> </a>
                 <a href="mailto:selectofreshmarket@gmail.com?"> <i class="btn far fa-envelope"></i></a>
             </div>
         </div>
@@ -498,6 +492,10 @@
     </div>
 
     <!-- custom js file link  -->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/js/lightbox.min.js"></script>
     <script src="js/script.js"></script>
 

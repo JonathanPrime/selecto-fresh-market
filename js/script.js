@@ -1,6 +1,5 @@
-let menu = document.querySelector('#menu-bar');
-let navbar = document.querySelector('.navbar');
-let header = document.querySelector('.header-2');
+let menu = document.querySelector('#menu-btn');
+let navbar = document.querySelector('.header .nav');
 
 menu.addEventListener('click', () =>{
     menu.classList.toggle('fa-times');
@@ -8,15 +7,16 @@ menu.addEventListener('click', () =>{
 });
 
 window.onscroll = () =>{
-    menu.classList.remove('fa-times');
-    navbar.classList.remove('active');
+  menu.classList.remove('fa-times');
+  navbar.classList.remove('active');
 
-    if(window.scrollY > 150){
-        header.classList.add('active');
-    }else{
-        header.classList.remove('active');
-    }
-
+  if(window.scrollY > 0){
+     document.querySelector('.header').classList.add('active');
+     document.getElementById('img-logo').src='../images/logos/logo-color.svg';
+  }else{
+     document.querySelector('.header').classList.remove('active');
+     document.getElementById('img-logo').src='../images/logos/logo-white.svg';
+  }
 }
 
 
